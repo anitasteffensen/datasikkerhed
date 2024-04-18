@@ -1,8 +1,12 @@
 /*content */
 /*header*/
 /*body*/
-body {
+* {
   margin: 0;
+  box-sizing: border-box;
+}
+
+body {
   background-color: #f4f4f4;
 }
 
@@ -13,7 +17,6 @@ body {
 .header {
   background-image: linear-gradient(to bottom right, rgb(79, 152, 246), rgb(242, 209, 94));
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-  position: fixed;
   width: 100%;
   z-index: 3;
 }
@@ -141,8 +144,8 @@ body {
     padding: 20px 30px;
   }
   .header .menu {
-    clear: none;
-    float: right;
+    display: flex;
+    justify-content: flex-end;
     max-height: none;
   }
   .header .menu-icon {

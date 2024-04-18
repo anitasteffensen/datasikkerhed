@@ -1,7 +1,12 @@
-body {
+* {
     margin: 0;
+    box-sizing: border-box;
+}
+
+body {
     background-color: $background;
 }
+
 
 .container {
     max-width: 1200px;
@@ -10,7 +15,6 @@ body {
 .header {
     background-image: $gradient-banner;
     box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
-    position: fixed;
     width: 100%;
     z-index: 3;
 }
@@ -149,8 +153,8 @@ body {
     }
 
     .header .menu {
-        clear: none;
-        float: right;
+        display: flex;
+        justify-content: flex-end;
         max-height: none;
     }
 
