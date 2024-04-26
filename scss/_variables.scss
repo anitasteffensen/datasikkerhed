@@ -1,10 +1,70 @@
 @font-face {
     font-family: roboto;
-    src: url("font/Roboto-Regular.tff");
+    src: url("font/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: open-sans;
+    src: url("font/OpenSans.ttf")
 }
 
 
 /*header*/
 $gradient-banner: linear-gradient(to bottom right, rgba(79, 152, 246, 1), rgba(242, 209, 94, 1));
+
+
+
 /*body*/
 $background: #f4f4f4;
+$main-color: rgba(79, 152, 246, 1);
+$component-color: black;
+
+
+
+/*Text variables and mixins*/
+$title-font: roboto;
+
+@mixin title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+@mixin subtitle {
+    font-size: 1.6;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+@mixin text {
+    font-family: open-sans;
+    font-size: 1rem;
+    line-height: 26px;
+    color: black;
+    text-align: left;
+    word-break: balance;
+    /*Golden ratio rule (xx * 1.618) */
+}
+
+
+@mixin accordin-title {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: black;
+    margin: 0;
+    margin-top: 1.5rem;
+}
+
+@mixin accordin-subtitle {
+    font-size: 1.4rem;
+    font-weight: lighter;
+    color: rgba(0, 0, 0, 0.75);
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+@mixin accordin-btn {
+    font-size: 1.2rem;
+    font-weight: lighter;
+}

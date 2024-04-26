@@ -1,0 +1,211 @@
+@charset "UTF-8";
+/*content */
+@font-face {
+  font-family: roboto;
+  src: url("font/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: open-sans;
+  src: url("font/OpenSans.ttf");
+}
+/*header*/
+/*body*/
+/*Text variables and mixins*/
+@font-face {
+  font-family: roboto;
+  src: url("font/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: open-sans;
+  src: url("font/OpenSans.ttf");
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: open-sans;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: roboto;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.6;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+p {
+  font-family: open-sans;
+  font-size: 1rem;
+  line-height: 26px;
+  color: black;
+  text-align: left;
+  word-break: balance;
+  /*Golden ratio rule (xx * 1.618) */
+}
+
+main {
+  margin: 2rem 2rem;
+  /*Ændre hvis container*/
+}
+
+.line-break {
+  border-top: 1px solid #c5c5c5;
+  color: #333;
+}
+
+/*-------------Accordian-----------------*/
+.accordion {
+  max-width: 50vw;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  border-top: 1px solid #c5c5c5;
+  color: #333;
+}
+
+.accordion-item h2 {
+  padding: 1rem 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.accordion-content {
+  max-height: 0;
+  /* Set a default max-height, but don't display it */
+  overflow: hidden;
+  /* Hide the content */
+  transition: max-height 0.4s ease-out;
+  /* Add a transition effect when sliding down (and up) the content */
+  padding: 0 1em;
+}
+
+.accordion-content p {
+  padding: 1em 0;
+  margin: 0;
+}
+
+/* Add this class to .accordion-content when the accordion item is active/open */
+.accordion-content.active {
+  max-height: auto;
+  /* Adjust as needed */
+}
+
+/*adding the + and - signs*/
+.accordion-item h2 {
+  position: relative;
+  padding-right: 30px;
+  /* Adjust as needed */
+}
+
+.accordion-item h2::before {
+  content: "+";
+  position: absolute;
+  right: 10px;
+  /* Adjust as needed */
+}
+
+.accordion-item.active h2::before {
+  content: "-";
+}
+
+/* For mobile screens evt delete*/
+@media (max-width: 767px) {
+  .accordion {
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+#fundamentals h1 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: black;
+  margin: 0;
+  margin-top: 1.5rem;
+}
+#fundamentals .sub-title {
+  font-size: 1.4rem;
+  font-weight: lighter;
+  color: rgba(0, 0, 0, 0.75);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+#fundamentals h2 {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+/*Game-button*/
+.arrow-link {
+  display: flex;
+  color: black;
+  background-color: transparent;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  cursor: pointer;
+  align-items: center;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.arrow-link > .arrow {
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  position: relative;
+  transform: rotate(-45deg);
+  margin-left: 3px;
+  transition: all 0.3s ease;
+}
+
+.arrow-link > .arrow::before {
+  display: block;
+  background-color: rgb(79, 152, 246);
+  width: 3px;
+  transform-origin: bottom right;
+  height: 2px;
+  position: absolute;
+  opacity: 0;
+  bottom: -1px;
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+  content: "";
+  right: 0;
+}
+
+.arrow-link:hover > .arrow {
+  transform: rotate(-45deg) translate(4px, 4px);
+  border-color: rgb(79, 152, 246);
+}
+
+.arrow-link:hover > .arrow::before {
+  opacity: 1;
+  width: 10px;
+}
+
+.arrow-link:hover {
+  color: rgb(79, 152, 246);
+}
+
+/*Mobile version - made on behalf of recommendation on smaller screens such as phones and smaller tablets*//*# sourceMappingURL=index.css.map */
