@@ -1,6 +1,15 @@
+@charset "UTF-8";
 /*content */
+@font-face {
+  font-family: roboto;
+  src: url("font/Roboto-Regular.tff");
+}
 /*header*/
 /*body*/
+@font-face {
+  font-family: roboto;
+  src: url("roboto/Roboto-Regular.ttf");
+}
 * {
   margin: 0;
   box-sizing: border-box;
@@ -12,6 +21,12 @@ body {
 
 .container {
   max-width: 1200px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: roboto;
 }
 
 * {
@@ -156,4 +171,40 @@ body {
   .header .menu-icon {
     display: none;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+@font-face {
+  font-family: roboto;
+  src: url("font/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: open-sans;
+  src: url("font/OpenSans.ttf");
+}
+h1 {
+  size: 2rem;
+  font-weight: 800;
+}
+
+h2 {
+  size: 1.8rem;
+  font-weight: 400;
+}
+
+h3 {
+  size: 1.4rem;
+  font-weight: lighter;
+}
+
+p {
+  size: 14px;
+  font-family: open-sans;
+  line-height: 23px;
+  /*Golden ratio rule (xx * 1.618) */
+}
+
+main {
+  margin: 2rem 2rem;
+  /*Ændre hvis container*/
+}
+
+/*Mobile version - made on behalf of recommendation on smaller screens such as phones and smaller tablets*//*# sourceMappingURL=styles.css.map */
