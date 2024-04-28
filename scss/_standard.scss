@@ -45,11 +45,27 @@ p {
 }
 
 main {
-    margin: 2rem 2rem;
-    /*Ændre hvis container*/
+    margin: 2rem 1.5rem;
+    /*Mobile version atleast lol*/
 }
 
 .line-break {
     border-top: 1px solid #c5c5c5;
     color: #333;
+}
+
+/*desktop version - made on behalf of recommendation on smaller screens such as phones and smaller tablets*/
+@media only screen and (min-width: 700px) {
+    main {
+        margin: 4rem 2rem;
+    }
+
+    #fundamentals {
+        .wrapper {
+            display: grid;
+            grid-template-columns: 50% 50%;
+
+        }
+
+    }
 }
