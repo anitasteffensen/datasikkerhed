@@ -25,11 +25,12 @@
 }
 
 body {
-  background-color: #f4f4f4;
+  background-color: #FAF9F6;
 }
 
 .container {
   max-width: 1200px;
+  margin: auto;
 }
 
 h1,
@@ -82,11 +83,6 @@ main {
   }
 }
 /*-------------Accordian-----------------*/
-.accordion {
-  max-width: 50vw;
-  margin: 0 auto;
-}
-
 .accordion-item {
   border-top: 1px solid #c5c5c5;
   color: #333;
@@ -148,10 +144,8 @@ main {
   .accordion {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  .accordion-item {
-    border-bottom: none;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
   }
 }
 * {
@@ -177,11 +171,12 @@ main {
   display: block;
   padding: 20px 20px;
   text-decoration: none;
+  color: black;
 }
 
 .header li a:hover,
 .header .menu-btn:hover {
-  font-weight: bolder;
+  font-weight: 600;
 }
 
 .header .logo {
@@ -272,7 +267,7 @@ main {
     padding: 0;
     list-style: none;
     overflow: hidden;
-    background-color: #f4f4f4;
+    background-color: #FAF9F6;
   }
 }
 @media only screen and (min-width: 700px) {
@@ -297,6 +292,10 @@ main {
     display: none;
   }
 }
+video {
+  width: 100%;
+}
+
 #fundamentals h1 {
   font-size: 1.6rem;
   font-weight: 400;
@@ -381,4 +380,9 @@ main {
   color: rgb(79, 152, 246);
 }
 
-/*desktop version - made on behalf of recommendation on smaller screens such as phones and smaller tablets*//*# sourceMappingURL=index.css.map */
+/*desktop version - made on behalf of recommendation on smaller screens such as phones and smaller tablets*/
+@media only screen and (min-width: 700px) {
+  video {
+    width: 100;
+  }
+}/*# sourceMappingURL=index.css.map */

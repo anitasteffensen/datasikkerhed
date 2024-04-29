@@ -1,0 +1,307 @@
+@font-face {
+  font-family: roboto;
+  src: url("font/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: open-sans;
+  src: url("font/OpenSans.ttf");
+}
+/*header*/
+/*body*/
+/*Text variables and mixins*/
+@font-face {
+  font-family: roboto;
+  src: url("font/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: open-sans;
+  src: url("font/OpenSans.ttf");
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: open-sans;
+}
+
+body {
+  background-color: #FAF9F6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: roboto;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.6;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+p {
+  font-family: open-sans;
+  font-size: 1rem;
+  line-height: 26px;
+  color: black;
+  text-align: left;
+  word-break: balance;
+  /*Golden ratio rule (xx * 1.618) */
+}
+
+main {
+  margin: 2rem 1.5rem;
+  /*Mobile version atleast lol*/
+}
+
+.line-break {
+  border-top: 1px solid #c5c5c5;
+  color: #333;
+}
+
+/*desktop version - made on behalf of recommendation on smaller screens such as phones and smaller tablets*/
+@media only screen and (min-width: 700px) {
+  main {
+    margin: 4rem 2rem;
+  }
+  #fundamentals .wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+/*-------------Accordian-----------------*/
+.accordion-item {
+  border-top: 1px solid #c5c5c5;
+  color: #333;
+}
+
+.accordion-item h3 {
+  padding: 1rem 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.accordion-content {
+  max-height: 0;
+  /* Set a default max-height, but don't display it */
+  overflow: hidden;
+  /* Hide the content */
+  transition: max-height 0.4s ease-out;
+  /* Add a transition effect when sliding down (and up) the content */
+  padding: 0 0;
+}
+
+.accordion-content p {
+  padding: 0;
+  margin: 0;
+  /*FIX THIS*/
+}
+
+/* Add this class to .accordion-content when the accordion item is active/open */
+.accordion-content.active {
+  max-height: auto;
+  /* Adjust as needed */
+}
+
+/*adding the + and - signs*/
+.accordion-item h3 {
+  position: relative;
+  padding-right: 30px;
+  /* Adjust as needed */
+}
+
+.accordion-item h3::before {
+  content: "+";
+  position: absolute;
+  right: 10px;
+  /* Adjust as needed */
+}
+
+.accordion-item.active h3::before {
+  content: "-";
+}
+
+.accordion {
+  max-width: 100vw;
+  margin: 0 auto;
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+  .accordion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-image: linear-gradient(to bottom right, rgb(79, 152, 246), rgb(242, 209, 94));
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  font-weight: 600;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+/* menu icon */
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: black;
+  display: block;
+  height: 3px;
+  position: relative;
+  transition: 0.2s ease-out;
+  width: 25px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: black;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 8px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -8px;
+}
+
+/* menu btn */
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+@media only screen and (max-width: 700px) {
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #FAF9F6;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+  }
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    display: flex;
+    justify-content: flex-end;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+.grid {
+  display: grid;
+  grid-template-columns: 100%;
+  margin: auto;
+}
+
+/*desktop version - made on behalf of recommendation on smaller screens such as phones and smaller tablets*/
+@media only screen and (min-width: 700px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: auto;
+  }
+}/*# sourceMappingURL=play.css.map */
