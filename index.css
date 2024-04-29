@@ -214,10 +214,10 @@ main {
 .header .menu-icon .navicon {
   background: black;
   display: block;
-  height: 2px;
+  height: 3px;
   position: relative;
   transition: 0.2s ease-out;
-  width: 18px;
+  width: 25px;
 }
 
 .header .menu-icon .navicon:before,
@@ -232,11 +232,11 @@ main {
 }
 
 .header .menu-icon .navicon:before {
-  top: 5px;
+  top: 8px;
 }
 
 .header .menu-icon .navicon:after {
-  top: -5px;
+  top: -8px;
 }
 
 /* menu btn */
@@ -337,6 +337,8 @@ main {
   align-items: center;
   letter-spacing: 1px;
   font-size: 14px;
+  margin-top: 1.5rem;
+  text-decoration: none;
 }
 
 .arrow-link > .arrow {
