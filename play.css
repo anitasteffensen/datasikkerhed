@@ -63,12 +63,25 @@ p {
 
 main {
   margin: 2rem 1.5rem;
-  /*Mobile version atleast lol*/
 }
 
 .line-break {
   border-top: 1px solid #c5c5c5;
   color: #333;
+}
+
+footer {
+  margin: 2rem 1.5rem;
+}
+footer .line-break {
+  margin-top: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-top: 4rem;
 }
 
 /*desktop version - made on behalf of recommendation on smaller screens such as phones and smaller tablets*/
