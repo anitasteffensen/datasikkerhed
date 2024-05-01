@@ -1,0 +1,30 @@
+#footer {
+
+    .line-break {
+        margin-top: 2rem;
+    }
+
+    .grid {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 2rem;
+        margin-top: 4rem;
+    }
+
+    .disclaimer {
+        background-color: #444444;
+        margin-top: 3rem;
+        padding: 2rem 1.5rem;
+
+
+        p {
+            color: $background;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+
+    }
+}

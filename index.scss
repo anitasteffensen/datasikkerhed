@@ -5,6 +5,7 @@
 @import 'scss/standard';
 @import 'scss/accordion';
 @import 'scss/header';
+@import 'scss/footer';
 
 
 
@@ -17,19 +18,31 @@ video {
 
 #fundamentals {
     h1 {
-        @include accordin-title;
+        @include accordion-title;
     }
 
     .sub-title {
-        @include accordin-subtitle;
+        @include accordion-subtitle;
     }
 
     h3 {
-        @include accordin-btn;
+        @include accordion-btn;
     }
 
     h4 {
-        @include accordin-h4;
+        @include accordion-h4;
+    }
+
+    p {
+        @include accordion-text;
+    }
+
+    .text-end {
+        margin-bottom: $accordion-end;
+    }
+
+    .list-end {
+        margin-bottom: $accordion-end;
     }
 
     .list-content li {
@@ -114,5 +127,17 @@ video {
         width: 100;
     }
 
+    main {
+        margin: 4rem 2rem;
+    }
+
+    #fundamentals {
+        .wrapper {
+            display: grid;
+            grid-template-columns: 50% 50%;
+
+        }
+
+    }
 
 }

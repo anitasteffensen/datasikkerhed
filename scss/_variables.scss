@@ -17,17 +17,19 @@ $gradient-banner: linear-gradient(to bottom right, rgba(79, 152, 246, 1), rgba(2
 /*body*/
 $background: #FAF9F6;
 $main-color: rgba(79, 152, 246, 1);
-$component-color: black;
+$component-color: 444444;
 
 
 
 /*Text variables and mixins*/
 $title-font: roboto;
+$accordion-end: 1rem;
 
 @mixin title {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
+    color: #333333;
 }
 
 @mixin subtitle {
@@ -35,43 +37,56 @@ $title-font: roboto;
     font-weight: 400;
     margin-bottom: 0.5rem;
     margin-top: 1.5rem;
+    color: #444444;
 }
 
 @mixin text {
     font-family: open-sans;
     font-size: 1rem;
     line-height: 26px;
-    color: black;
+    color: #333333;
     text-align: left;
     word-break: balance;
     /*Golden ratio rule (xx * 1.618) */
 }
 
+@mixin accordion-text {
+    font-family: open-sans;
+    font-size: 1rem;
+    line-height: 26px;
+    margin-bottom: 0.5rem;
+    color: #333333;
+    text-align: left;
+    word-break: balance;
+}
 
-@mixin accordin-title {
+@mixin accordion-title {
     font-size: 1.6rem;
     font-weight: 400;
-    color: black;
+    color: #333333;
     margin: 0;
     margin-top: 1.5rem;
 }
 
-@mixin accordin-subtitle {
+@mixin accordion-subtitle {
     font-size: 1.4rem;
     font-weight: lighter;
-    color: rgba(0, 0, 0, 0.75);
+    color: #44444495;
     margin-top: 0;
     margin-bottom: 1rem;
 }
 
-@mixin accordin-btn {
+@mixin accordion-btn {
     font-size: 1.2rem;
     font-weight: lighter;
+    color: #444444;
 }
 
-@mixin accordin-h4 {
+@mixin accordion-h4 {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
     font-size: 1rem;
     font-weight: 600;
+    color: #44444495;
+
 }

@@ -3,10 +3,15 @@
     box-sizing: border-box;
 }
 
+.logo {
+    height: 3rem;
+    padding: 0 0.5rem;
+    margin-top: 0.2rem;
+}
+
 .header {
-    background-image: $gradient-banner;
-    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
-    width: 100%;
+    background-image: url("images/banner.png");
+    background-size: cover;
     z-index: 3;
 }
 
@@ -22,20 +27,13 @@
     padding: 20px 20px;
     text-decoration: none;
     color: black;
+    text-align: center;
 }
 
 
 .header li a:hover,
 .header .menu-btn:hover {
     font-weight: 600;
-}
-
-.header .logo {
-    display: block;
-    float: left;
-    font-size: 2em;
-    padding: 10px 20px;
-    text-decoration: none;
 }
 
 /* menu */
@@ -129,6 +127,11 @@
 
 
 @media only screen and (min-width: 700px) {
+    .logo {
+        display: none;
+    }
+
+
     .header ul {
         margin: 0;
         padding: 0;

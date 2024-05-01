@@ -42,6 +42,7 @@ h1 {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  color: #333333;
 }
 
 h2 {
@@ -49,13 +50,14 @@ h2 {
   font-weight: 400;
   margin-bottom: 0.5rem;
   margin-top: 1.5rem;
+  color: #444444;
 }
 
 p {
   font-family: open-sans;
   font-size: 1rem;
   line-height: 26px;
-  color: black;
+  color: #333333;
   text-align: left;
   word-break: balance;
   /*Golden ratio rule (xx * 1.618) */
@@ -70,30 +72,6 @@ main {
   color: #333;
 }
 
-footer {
-  margin: 2rem 1.5rem;
-}
-footer .line-break {
-  margin-top: 2rem;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  gap: 2rem;
-  margin-top: 4rem;
-}
-
-/*desktop version - made on behalf of recommendation on smaller screens such as phones and smaller tablets*/
-@media only screen and (min-width: 700px) {
-  main {
-    margin: 4rem 2rem;
-  }
-  #fundamentals .wrapper {
-    display: grid;
-    grid-template-columns: 50% 50%;
-  }
-}
 /*-------------Accordian-----------------*/
 .accordion-item {
   border-top: 1px solid #c5c5c5;
@@ -165,10 +143,15 @@ footer .line-break {
   box-sizing: border-box;
 }
 
+.logo {
+  height: 3rem;
+  padding: 0 0.5rem;
+  margin-top: 0.2rem;
+}
+
 .header {
-  background-image: linear-gradient(to bottom right, rgb(79, 152, 246), rgb(242, 209, 94));
-  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-  width: 100%;
+  background-image: url("images/banner.png");
+  background-size: cover;
   z-index: 3;
 }
 
@@ -184,19 +167,12 @@ footer .line-break {
   padding: 20px 20px;
   text-decoration: none;
   color: black;
+  text-align: center;
 }
 
 .header li a:hover,
 .header .menu-btn:hover {
   font-weight: 600;
-}
-
-.header .logo {
-  display: block;
-  float: left;
-  font-size: 2em;
-  padding: 10px 20px;
-  text-decoration: none;
 }
 
 /* menu */
@@ -283,6 +259,9 @@ footer .line-break {
   }
 }
 @media only screen and (min-width: 700px) {
+  .logo {
+    display: none;
+  }
   .header ul {
     margin: 0;
     padding: 0;
