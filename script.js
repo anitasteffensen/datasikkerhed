@@ -13,3 +13,21 @@ document.querySelectorAll('.accordion-item h3').forEach((accordionToggle) => {
         }
     });
 });
+
+
+
+/*document.getElementById('options').addEventListener('change', function (){
+    var xxx = this.value;
+    var option1Div = document.getElementById('option1');
+    var option2Div = document.getElementById('option2');
+
+    if (xxx === 'option1'){
+option1Div.classList.remove('hidden');
+option2Div.classList.add('hidden');
+    }
+    else if (xxx = 'option2'){
+        option1Div.classList.add('hidden');
+        option2Div.classList.remove('hidden');
+    }
+
+});*/
