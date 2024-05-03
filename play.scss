@@ -2,9 +2,80 @@
 @import 'scss/standard';
 @import 'scss/accordion';
 @import 'scss/header';
+@import 'scss/footer';
 
 
 
+
+
+#branching-scenarios {
+    h1 {
+        @include subtitle;
+        font-size: 1.6rem;
+    }
+
+    .scenario {
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+
+
+
+
+    button {
+        @include text;
+        border: solid 1px black;
+        border-radius: 5px;
+        color: black;
+        text-align: left;
+        cursor: pointer;
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin: 1rem 0;
+    }
+
+
+
+    .button-a {
+        background: linear-gradient(to right,
+                $button-a-color 0,
+                $button-a-color 2rem,
+                $background 2rem,
+                $background 100%);
+
+    }
+
+    .button-b {
+        background: linear-gradient(to right,
+                $button-b-color 0,
+                $button-b-color 2rem,
+                $background 2rem,
+                $background 100%);
+    }
+
+
+
+    .button-c {
+        background: linear-gradient(to right,
+                $button-c-color 0,
+                $button-c-color 2rem,
+                $background 2rem,
+                $background 100%);
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+
+    }
+}
+
+
+
+/*footer*/
 .grid {
     display: grid;
     grid-template-columns: 100%;
@@ -15,6 +86,18 @@
 
 /*desktop version - made on behalf of recommendation on smaller screens such as phones and smaller tablets*/
 @media only screen and (min-width: 700px) {
+    #branching-scenarios {
+
+        .scenario {
+            flex-direction: row;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    /*footer*/
     .grid {
         display: grid;
         grid-template-columns: 50% 50%;

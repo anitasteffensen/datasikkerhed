@@ -7,13 +7,14 @@
     <title>Learning by doing</title>
     <link rel="stylesheet" href="play.css">
     <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/bfd743891e.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
     <header class="header">
         <div class="container">
-            <!--<img class="header-logo" alt="NetVagten's logo" src=""!-->
+            <img class="logo" src="images/cybersafe.png" alt="cybersafes logo">
             <input type="checkbox" class="menu-btn" id="menu-btn">
             <label class="menu-icon" for="menu-btn">
                 <span class="navicon"></span>
@@ -28,90 +29,192 @@
     <main>
         <div class="container">
             <section id="branching-scenarios">
-                <div class="scenario-1">
-                    <h1>Stranger Danger</h1>
-                    <p>Præsentere historien....</p>
-                    <!--add billede her at du har fået en anmodning.>
-            <div id="option1" class="hidden">
-                <button class="button a" type="button">a.
-                    <span>Click mig</span>
-                </button>
-            </div>
-            <div id="option2" class="hidden">
-                <button class="button b" type="button">b.
-                    <span>Click mig istedet</span>
-                </button>
-            </div-->
-                </div>
-                <div class="scenario-2a">
-                    <!--Sletter anmodningen-->
-                    <!--scenarioet færdiggøres her-->
-
-                </div>
-                <div class="scenario-2b">
-                    <!--Åbner og vurder beskeden-->
-                    <!--3 valgmuligheder her -->
-
-                </div>
-                <div class="scenario-2b-a">
-                    <!--Sletter beskeden-->
-                    <!--scenarioet sluttes her-->
-
+                <h1>Fremmed på nettet</h1>
+                <div id="scenario-1" class="scenario">
+                    <div class="text-wrapper">
+                        <p>Du har åbnet instagram og ser, at du har modtaget en besked anmodning. Du går ind og
+                            tjekker
+                            hvem
+                            der har skrevet, og ser at det er en ukendt-bruger.</p>
+                        <p>Hvad gør du nu?</p>
+                        <!--div id="option1" class="hidden"!-->
+                        <button class="choice button-a" type="button">a.
+                            <span>Sletter anmodningen og vender tilbage til at scrolle instagram.</span>
+                        </button>
+                        <!--div id="option2" class="hidden"!-->
+                        <button class="choice button-b" type="button">b.
+                            <span>Åbner og vurdere anmodningens indhold.</span>
+                        </button>
+                    </div>
+                    <img src="images/request.png" alt=""> <!--add billede her at du har fået en anmodning.-->
                 </div>
 
-                <div class="scenario-2b-c">
-                    <!--Tjekker profilen beskeden kommer fra-->
-                    <!--2 valgmuligheder her-->
+                <div id="scenario-2a" class="scenario">
+                    <div class="text-wrapper">
+                        <!--Sletter anmodningen-->
+                        <!--scenarioet færdiggøres her-->
+                    </div>
+                    <img src="images/delete-request.png" alt="">
+
 
                 </div>
+                <div id="scenario-2b" class="scenario">
+                    <div class="text-wrapper">
+                        <p>Du valgte at åbne beskeden og vurderes den indhold</p>
+                        <p>Hvad gør du nu efter at have set beskedens indhold?</p>
 
-                <div class="scenario-2b-c-a">
-                    <!--vurdere at profilen er fake-->
-                    <!--scenarioet er slut lig med 2b-a -->
-                </div>
-                <div class="scenario-2b-c-b">
-                    <!--du vælger at svare profilen-->
-                    <!--går hen til scenario 2b-b -->
-                </div>
-
-                <div class="scenario-2b-b">
-                    <!--Svarer beskeden og begynder en overfladisk samtale-->
-                    <!--2 valgmuligheder her-->
+                        <button class="choice button-a" type="button">a.
+                            <span>Du sletter beskeden og går tilbage til at scrolle instagram.</span>
+                        </button>
+                        <button class="choice button-b" type="button"><span>b.</span>
+                            <span>Du vælger at gå ind på den ukendts-brugers profil.</span>
+                        </button>
+                        <button class="choice button-c" type="button">c.
+                            <span>Du skriver tilbage til den ukendte-bruger.</span>
+                        </button>
+                    </div>
+                    <img src="images/check-message.png" alt="">
 
                 </div>
 
-                <div class="scenario-3a">
-                    <!--Du begynder en samtale, et venskab formes og du føler dig set-->
-                    <!--2 valgmuligheder her-->
+                <div id="scenario-2b-a" class="scenario">
+                    <div class="text-wrapper">
+                        <!--Sletter beskeden-->
+                        <!--scenarioet sluttes her-->
+                    </div>
+                    <img src="images/delete-message.png" alt="">
                 </div>
 
-                <div class="scenario-3b">
-                    <!--Du afbryder kontakten-->
-                </div>
-                <div class="scenario-3a-a-">
-                    <!--Du afbryder kontekten, da de begynder at stille personlige spørgsmål-->
-                    <!--scenarioet er færdig.-->
+                <div id="scenario-2b-b" class="scenario">
+                    <div class="text-wrapper">
+                        <p>Kloget at du tjekker profilen beskeden kommer fra.</p>
+                        <!--Billede af profil og dens indhold-->
+                        <p>Som du kan se, så er profilen sat til privat. Men du kan stadig se antal 'followers'
+                            og
+                            antal
+                            'following'. De følger næsten 40 gange flere end der følger dem. Dette <i>kan</i>
+                            være
+                            et
+                            tegn
+                            på, at profilen er falsk</p>
+                        <p>Hvad gør du i denne situation?</p>
+                        <button class="choice button-a" type="button">a.
+                            <span>Du vurdere at profilen er fake og vælger derfor, at slette beskeden og
+                                eventuelt
+                                blokere
+                                profilen.</span>
+                            <!--vurdere at profilen er fake-->
+                            <!--scenarioet er slut lig med 2b-a -->
+                        </button>
+                        <button class="choice button-b" type="button">b.
+                            <span>Du beslutter at besvare brugeren.</span>
+                            <!--Går hen til scenario 2b-c-->
+                        </button>
+                    </div>
+                    <!--Billede af profil og dens indhold-->
                 </div>
 
-                <div class="scenario-3a-b">
-                    <!--Personen er en douch, og begynder at afpresse dig-->
-                    <!--2 valgmuligheder-->
+                <div id="scenario-2b-c" class="scenario">
+
+                    <div class="text-wrapper">
+                        <p>Du har skrevet tilbage til brugeren og starter en samtale.
+                            Brugeren viser interesse i
+                            dig
+                            og
+                            stiller spørgsmål om din alder, hvor du bor henne af osv.</p>
+                        <p>Hvad gør du?</p>
+                        <button class="choice button-a" type="button">a.
+                            <span>Du besvare deres spørgsmål og fortsætter samtalen.</span>
+                        </button>
+                        <button class="choice button-b" type="button">b.
+                            <span>Du vælger ikke at svare personen og afbryder kontakten.</span>
+                        </button>
+                    </div>
+                    <!--img her-->
+
                 </div>
-                <div class="scenario-4a">
-                    <!--Afbryder kontakten-->
-                    <!--færdiggjort-->
+
+                <div id="scenario-3a" class="scenario">
+                    <div class="text-wrapper">
+                        <p>I begynder at skrive en del sammen og har formet et venskab. De begynder at
+                            stille
+                            mere
+                            personlige spørgsmål fx. om din barndom, familieforhold og generelt ting, som
+                            man
+                            ikke
+                            deler med alle og en hver.</p>
+                        <p>Hvad gør du?</p>
+                        <button class="choice button-a" type="button">a.
+                            <span>Afbryder kontakten med det samme. Føler dig ikke komfortable med denne
+                                udvikling.</span>
+                        </button>
+                        <button class="choice button-b" type="button">b.
+                            <span> Du er glad for at de viser interesse i dig og svare deres spørgsmål, ligesom
+                                du
+                                ville
+                                med enhver anden ven offline.</span>
+                        </button>
+                    </div>
+                    <!--billede her lol-->
+
                 </div>
-                <div class="scenario-4b">
-                    <!--Du fortsætter-->
-                    <!--advarelses! Færddigjort-->
+
+
+                <div id="scenario-3b" class="scenario">
+                    <div class="text-wrapper">
+                        <!--Du afbryder kontakten-->
+                        <!--Klogt, det er nemlig ikke smart at sende sådanne oplysninger.-->
+                    </div>
+                    <!--img her-->
+
+                </div>
+
+                <div id="scenario-3a-a" class="scenario">
+                    <div class="text-wrapper">
+                        <!--Du afbryder kontekten, da de begynder at stille personlige spørgsmål-->
+                        <!--scenarioet er færdig.-->
+                    </div>
+                    <!--img-->
+                </div>
+
+                <div id="scenario-3a-b" class="scenario">
+                    <div class="text-wrapper">
+                        <p>En dag beslutter brugeren, at du har delt tilstrækkeligt nok til, at de kan
+                            afpresse
+                            dig
+                            til at sende mere intimme oplysninger og/eller billeder.</p>
+                        <p>Hvad gør du?</p>
+                        <button class="choice button-a" type="button">a.
+                            <span>Afbryder kontakten med det samme.</span>
+                        </button>
+                        <button class="choice button-b" type="button">b.
+                            <span>Du gør som personen siger i håbet om, at de vil lade dig være
+                                efterfølgende.</span>
+                        </button>
+                    </div>
+                    <!--Billede her-->
+                </div>
+                <div id="scenario-4a" class="scenario">
+                    <div class="text-wrapper">
+                        <!--Afbryder kontakten-->
+                        <!--færdiggjort-->
+                    </div>
+                    <!--img-->
+                </div>
+                <div id="scenario-4b" class="scenario">
+                    <div class="text-wrapper">
+                        <!--Du fortsætter-->
+                        <!--advarelses! Færddigjort-->
+                    </div>
+                    <!--img-->
                 </div>
             </section>
-
-
-
-
-
         </div>
+
+
+
+
+
 
     </main>
     <footer>
@@ -127,7 +230,7 @@
             </div>
             <div class="disclaimer">
                 <p>Disclaimer: Denne hjemmeside er kun til uddannelsesmæssige formål.</p>
-                <p>© 2024 Copyrigh Company</p>
+                <p>© 2024 Copyright Company</p>
                 <p>CyberSafe@gmail.com</p>
             </div>
         </section>

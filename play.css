@@ -8,6 +8,7 @@
 }
 /*header*/
 /*body*/
+/*delete*/
 /*Text variables and mixins*/
 @font-face {
   font-family: roboto;
@@ -145,8 +146,8 @@ main {
 
 .logo {
   height: 3rem;
-  padding: 0 0.5rem;
-  margin-top: 0.2rem;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
 }
 
 .header {
@@ -259,9 +260,6 @@ main {
   }
 }
 @media only screen and (min-width: 700px) {
-  .logo {
-    display: none;
-  }
   .header ul {
     margin: 0;
     padding: 0;
@@ -283,6 +281,74 @@ main {
     display: none;
   }
 }
+#footer .line-break {
+  margin-top: 2rem;
+}
+#footer .grid {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+#footer .disclaimer {
+  background-color: #444444;
+  margin-top: 3rem;
+  padding: 2rem 1.5rem;
+}
+#footer .disclaimer p {
+  color: #FAF9F6;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+#branching-scenarios h1 {
+  font-size: 1.6;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+  color: #444444;
+  font-size: 1.6rem;
+}
+#branching-scenarios .scenario {
+  display: flex;
+  flex-direction: column-reverse;
+}
+#branching-scenarios button {
+  font-family: open-sans;
+  font-size: 1rem;
+  line-height: 26px;
+  color: #333333;
+  text-align: left;
+  word-break: balance;
+  /*Golden ratio rule (xx * 1.618) */
+  border: solid 1px black;
+  border-radius: 5px;
+  color: black;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 1rem 0;
+}
+#branching-scenarios .button-a {
+  background: linear-gradient(to right, #0366E8 0, #0366E8 2rem, #FAF9F6 2rem, #FAF9F6 100%);
+}
+#branching-scenarios .button-b {
+  background: linear-gradient(to right, #08A2E1 0, #08A2E1 2rem, #FAF9F6 2rem, #FAF9F6 100%);
+}
+#branching-scenarios .button-c {
+  background: linear-gradient(to right, #0BB3D9 0, #0BB3D9 2rem, #FAF9F6 2rem, #FAF9F6 100%);
+}
+#branching-scenarios img {
+  height: 100%;
+  width: 100%;
+}
+
+/*footer*/
 .grid {
   display: grid;
   grid-template-columns: 100%;
@@ -291,6 +357,13 @@ main {
 
 /*desktop version - made on behalf of recommendation on smaller screens such as phones and smaller tablets*/
 @media only screen and (min-width: 700px) {
+  #branching-scenarios .scenario {
+    flex-direction: row;
+  }
+  #branching-scenarios img {
+    width: 100%;
+  }
+  /*footer*/
   .grid {
     display: grid;
     grid-template-columns: 50% 50%;

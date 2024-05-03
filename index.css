@@ -9,6 +9,7 @@
 }
 /*header*/
 /*body*/
+/*delete*/
 /*Text variables and mixins*/
 @font-face {
   font-family: roboto;
@@ -146,8 +147,8 @@ main {
 
 .logo {
   height: 3rem;
-  padding: 0 0.5rem;
-  margin-top: 0.2rem;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
 }
 
 .header {
@@ -260,9 +261,6 @@ main {
   }
 }
 @media only screen and (min-width: 700px) {
-  .logo {
-    display: none;
-  }
   .header ul {
     margin: 0;
     padding: 0;
@@ -384,7 +382,7 @@ video {
 
 .arrow-link > .arrow::before {
   display: block;
-  background-color: rgb(79, 152, 246);
+  background-color: #0366E8;
   width: 3px;
   transform-origin: bottom right;
   height: 2px;
@@ -399,7 +397,7 @@ video {
 
 .arrow-link:hover > .arrow {
   transform: rotate(-45deg) translate(4px, 4px);
-  border-color: rgb(79, 152, 246);
+  border-color: #0366E8;
 }
 
 .arrow-link:hover > .arrow::before {
@@ -408,7 +406,7 @@ video {
 }
 
 .arrow-link:hover {
-  color: rgb(79, 152, 246);
+  color: #0366E8;
 }
 
 @media only screen and (max-width: 700px) {

@@ -10,14 +10,20 @@
 
 
 /*header*/
-$gradient-banner: linear-gradient(to bottom right, rgba(79, 152, 246, 1), rgba(242, 209, 94, 1));
+$gradient-banner: linear-gradient(to bottom left, #0366E8, #08A2E1, #0BB3D9, #7EE7F2);
 
 
 
 /*body*/
 $background: #FAF9F6;
-$main-color: rgba(79, 152, 246, 1);
-$component-color: 444444;
+$main-color: #0366E8;
+$button-a-color: #0366E8;
+$button-b-color: #08A2E1;
+$button-c-color: #0BB3D9;
+$button-d-color: #7EE7F2;
+/*delete*/
+
+$component-color: #444444;
 
 
 
