@@ -9,9 +9,16 @@
     margin-left: 0.5rem;
 }
 
-.header {
-    background-image: url("images/banner.png");
-    background-size: cover;
+.banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.header .container {
+    position: relative;
     z-index: 3;
 }
 
@@ -130,7 +137,7 @@
 
 
     .header ul {
-        margin: 0;
+        margin-top: -3.5rem;
         padding: 0;
         list-style: none;
         overflow: hidden;

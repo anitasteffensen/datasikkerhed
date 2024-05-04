@@ -4,7 +4,7 @@
 
 
 .accordion-item {
-    border-top: 1px solid #c5c5c5;
+    border-top: 1px solid silver;
     color: #333;
 }
 
@@ -24,30 +24,25 @@
     padding: 0 0;
 }
 
-.accordion-content p {
-    padding: 0;
-    margin: 0;
-    /*FIX THIS*/
-}
+
 
 /* Add this class to .accordion-content when the accordion item is active/open */
 .accordion-content.active {
     max-height: auto;
-    /* Adjust as needed */
 }
 
 /*adding the + and - signs*/
 .accordion-item h3 {
     position: relative;
     padding-right: 30px;
-    /* Adjust as needed */
 }
 
 .accordion-item h3::before {
     content: "+";
     position: absolute;
     right: 10px;
-    /* Adjust as needed */
+    font-size: 1.5rem;
+    color: #444444;
 }
 
 .accordion-item.active h3::before {
