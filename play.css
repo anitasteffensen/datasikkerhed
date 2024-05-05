@@ -311,9 +311,36 @@ main {
   color: #444444;
   font-size: 1.6rem;
 }
+#branching-scenarios #start {
+  font-family: open-sans;
+  font-size: 1rem;
+  line-height: 26px;
+  color: #333333;
+  text-align: left;
+  word-break: balance;
+  /*Golden ratio rule (xx * 1.618) */
+  background-color: #FAF9F6;
+  width: 5rem;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 1rem;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+}
+#branching-scenarios #start:hover {
+  color: #0366E8;
+  font-weight: bold;
+}
 #branching-scenarios .scenario {
   display: flex;
   flex-direction: column-reverse;
+}
+#branching-scenarios .start {
+  flex-direction: column !important;
+}
+#branching-scenarios .hidden {
+  display: none;
 }
 #branching-scenarios button {
   font-family: open-sans;
@@ -346,6 +373,7 @@ main {
 #branching-scenarios img {
   height: 100%;
   width: 100%;
+  max-height: 25rem;
 }
 
 /*footer*/
@@ -355,13 +383,31 @@ main {
   margin: auto;
 }
 
+@media only screen and (min-width: 500px) {
+  #branching-scenarios .scenario {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  #branching-scenarios img {
+    height: 30%;
+    width: 40%;
+    margin: auto auto;
+  }
+  #branching-scenarios .text-wrapper {
+    width: 75%;
+    margin: auto auto;
+  }
+}
 /*desktop version - made on behalf of recommendation on smaller screens such as phones and smaller tablets*/
 @media only screen and (min-width: 700px) {
   #branching-scenarios .scenario {
     flex-direction: row;
+    gap: 2rem;
   }
   #branching-scenarios img {
-    width: 100%;
+    height: 40%;
+    width: 40%;
+    margin: auto auto;
   }
   /*footer*/
   .grid {

@@ -14,10 +14,38 @@
         font-size: 1.6rem;
     }
 
+    #start {
+        @include text;
+        background-color: $background;
+        width: 5rem;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 1rem;
+        display: block;
+        text-align: center;
+        cursor: pointer;
+
+    }
+
+    #start:hover {
+        color: $main-color;
+        font-weight: bold;
+    }
+
+
+
     .scenario {
         display: flex;
         flex-direction: column-reverse;
 
+    }
+
+    .start {
+        flex-direction: column !important;
+    }
+
+    .hidden {
+        display: none;
     }
 
 
@@ -69,9 +97,12 @@
     img {
         height: 100%;
         width: 100%;
+        max-height: 25rem;
+
 
     }
 }
+
 
 
 
@@ -83,6 +114,27 @@
 }
 
 
+//Evt kig oå om der skal lave en ekstra version til fx 500px
+
+@media only screen and (min-width:500px) {
+    #branching-scenarios {
+        .scenario {
+            flex-direction: row;
+            gap: 1rem;
+        }
+
+        img {
+            height: 30%;
+            width: 40%;
+            margin: auto auto;
+        }
+
+        .text-wrapper {
+            width: 75%;
+            margin: auto auto;
+        }
+    }
+}
 
 /*desktop version - made on behalf of recommendation on smaller screens such as phones and smaller tablets*/
 @media only screen and (min-width: 700px) {
@@ -90,11 +142,16 @@
 
         .scenario {
             flex-direction: row;
+            gap: 2rem;
         }
 
         img {
-            width: 100%;
+            height: 40%;
+            width: 40%;
+            margin: auto auto;
         }
+
+
     }
 
     /*footer*/

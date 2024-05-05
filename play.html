@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning by doing</title>
     <link rel="stylesheet" href="play.css">
-    <script src="script.js" defer></script>
+    <script src="play.js" defer></script>
     <script src="https://kit.fontawesome.com/bfd743891e.js" crossorigin="anonymous"></script>
 
 </head>
@@ -14,7 +14,8 @@
 <body>
     <header class="header">
         <div class="container">
-            <img class="logo" src="images/cybersafe.png" alt="cybersafes logo">
+            <a href="index.html">
+                <img class="logo" src="images/cybersafe.png" alt="cybersafes logo"></a>
             <input type="checkbox" class="menu-btn" id="menu-btn">
             <label class="menu-icon" for="menu-btn">
                 <span class="navicon"></span>
@@ -30,20 +31,26 @@
     <main>
         <div class="container">
             <section id="branching-scenarios">
-                <h1>Fremmed på nettet</h1>
-                <div id="scenario-1" class="scenario">
+                <div class="start scenario">
+                    <h1>Fremmed på nettet</h1>
+                    <p>Velkommen til spillet 'Stranger Danger'. Du vil blive stillet over for forskellige scenarier, og
+                        træffe valg ud fra disse scenarier. Hvert valg har betydning for udviklingen af spillet og dets
+                        handling.</p>
+                    <button id="start" class="choice" onclick="hideAllSectionsExcept('scenario-1')"
+                        type="button">Start</button>
+                </div>
+
+                <div id="scenario-1" class="scenario hidden">
                     <div class="text-wrapper">
                         <p>Du har åbnet instagram og ser, at du har modtaget en besked anmodning. Du går ind og
                             tjekker
                             hvem
                             der har skrevet, og ser at det er en ukendt-bruger.</p>
                         <p>Hvad gør du nu?</p>
-                        <!--div id="option1" class="hidden"!-->
-                        <button class="choice button-a" type="button">a.
+                        <button class="choice button-a" onclick="hideAllSectionsExcept('scenario-2a')" type="button">a.
                             <span>Sletter anmodningen og vender tilbage til at scrolle instagram.</span>
                         </button>
-                        <!--div id="option2" class="hidden"!-->
-                        <button class="choice button-b" type="button">b.
+                        <button class="choice button-b" onclick="hideAllSectionsExcept('scenario-2b')" type="button">b.
                             <span>Åbner og vurdere anmodningens indhold.</span>
                         </button>
                     </div>
@@ -51,7 +58,7 @@
                         alt="screenshot af en instagram besked anmodning, hvor der kan trykkes 'slet">
                 </div>
 
-                <div id="scenario-2a" class="scenario">
+                <div id="scenario-2a" class="scenario hidden">
                     <div class="text-wrapper">
                         <p>Du har valgt at slette beskeden, et smart valg.</p>
                         <p>Du kan til hver en tid dog åbne og vurdere beskeden inden du vælger at slette den. </p>
@@ -62,18 +69,21 @@
 
 
                 </div>
-                <div id="scenario-2b" class="scenario">
+                <div id="scenario-2b" class="scenario hidden">
                     <div class="text-wrapper">
                         <p>Du valgte at åbne beskeden og vurdere dens indhold</p>
                         <p>Hvad gør du nu efter at have set beskedens indhold?</p>
 
-                        <button class="choice button-a" type="button">a.
+                        <button class="choice button-a" onclick="hideAllSectionsExcept('scenario-2b-a')"
+                            type="button">a.
                             <span>Du sletter beskeden og går tilbage til at scrolle instagram.</span>
                         </button>
-                        <button class="choice button-b" type="button"><span>b.</span>
+                        <button class="choice button-b" onclick="hideAllSectionsExcept('scenario-2b-b')"
+                            type="button"><span>b.</span>
                             <span>Du vælger at gå ind på den ukendts-brugers profil.</span>
                         </button>
-                        <button class="choice button-c" type="button">c.
+                        <button class="choice button-c" onclick="hideAllSectionsExcept('scenario-2b-c')"
+                            type="button">c.
                             <span>Du skriver tilbage til den ukendte-bruger.</span>
                         </button>
                     </div>
@@ -82,7 +92,7 @@
 
                 </div>
 
-                <div id="scenario-2b-a" class="scenario">
+                <div id="scenario-2b-a" class="scenario hidden">
                     <div class="text-wrapper">
                         <p>Du valgte at slette beskeden efter at have vurderet dens indhold - Smart!</p>
                         <p>
@@ -97,7 +107,7 @@
 
                 </div>
 
-                <div id="scenario-2b-b" class="scenario">
+                <div id="scenario-2b-b" class="scenario hidden">
                     <div class="text-wrapper">
                         <p>Kloget at du tjekker profilen beskeden kommer fra.</p>
                         <p>Som du kan se, så er profilen sat til privat. Men du kan stadig se antal 'followers'
@@ -109,13 +119,15 @@
                             tegn
                             på, at profilen er falsk</p>
                         <p>Hvad gør du i denne situation?</p>
-                        <button class="choice button-a" type="button">a.
+                        <button class="choice button-a" onclick="hideAllSectionsExcept('scenario-2b-b-a')"
+                            type="button">a.
                             <span>Du vurdere at profilen er fake og vælger derfor, at slette beskeden og
                                 eventuelt
                                 blokere
                                 profilen.</span>
                         </button>
-                        <button class="choice button-b" type="button">b.
+                        <button class="choice button-b" onclick="hideAllSectionsExcept('scenario-2b-c')"
+                            type="button">b.
                             <span>Du beslutter at besvare brugeren.</span>
                             <!--Går hen til scenario 2b-c-->
                         </button>
@@ -125,7 +137,7 @@
                 </div>
 
 
-                <div id="scenario-2b-b-a" class="scenario">
+                <div id="scenario-2b-b-a" class="scenario hidden">
                     <div class="text-wrapper">
                         <p>Du har valgt at slette beskeden efter at have vurderet profilen og beskedens indhold. Godt!
                         </p>
@@ -138,7 +150,7 @@
                         alt="screenshot af instagram profil med rødt banner hvor der står 'fake' på">
                 </div>
 
-                <div id="scenario-2b-c" class="scenario">
+                <div id="scenario-2b-c" class="scenario hidden">
 
                     <div class="text-wrapper">
                         <p>Du har skrevet tilbage til brugeren og starter en samtale.
@@ -147,10 +159,10 @@
                             og
                             stiller spørgsmål om din alder, hvor du bor henne af osv.</p>
                         <p>Hvad gør du?</p>
-                        <button class="choice button-a" type="button">a.
+                        <button class="choice button-a" onclick="hideAllSectionsExcept('scenario-3a')" type="button">a.
                             <span>Du besvare deres spørgsmål og fortsætter samtalen.</span>
                         </button>
-                        <button class="choice button-b" type="button">b.
+                        <button class="choice button-b" onclick="hideAllSectionsExcept('scenario-3b')" type="button">b.
                             <span>Du vælger ikke at svare personen og afbryder kontakten.</span>
                         </button>
                     </div>
@@ -159,7 +171,7 @@
 
                 </div>
 
-                <div id="scenario-3b" class="scenario">
+                <div id="scenario-3b" class="scenario hidden">
                     <div class="text-wrapper">
                         <p>Du har valgt at afbryde kontakten. Godt!</p>
                         <p>Du skylder dem ingen ting, selv hvis du har skrevet med dem
@@ -169,7 +181,7 @@
                         alt="screenshot af profil-oversigt, hvor der trykkes på 'block-knappen">
                 </div>
 
-                <div id="scenario-3a" class="scenario">
+                <div id="scenario-3a" class="scenario hidden">
                     <div class="text-wrapper">
                         <p>I begynder at skrive en del sammen og har formet et venskab. De begynder at
                             stille
@@ -179,11 +191,13 @@
                             ikke
                             deler med alle og en hver.</p>
                         <p>Hvad gør du?</p>
-                        <button class="choice button-a" type="button">a.
+                        <button class="choice button-a" onclick="hideAllSectionsExcept('scenario-3a-a')"
+                            type="button">a.
                             <span>Afbryder kontakten med det samme. Føler dig ikke komfortable med denne
                                 udvikling.</span>
                         </button>
-                        <button class="choice button-b" type="button">b.
+                        <button class="choice button-b" onclick="hideAllSectionsExcept('scenario-3a-b')"
+                            type="button">b.
                             <span> Du er glad for at de viser interesse i dig og svare deres spørgsmål, ligesom
                                 du
                                 ville
@@ -197,7 +211,7 @@
 
 
 
-                <div id="scenario-3a-a" class="scenario">
+                <div id="scenario-3a-a" class="scenario hidden">
                     <div class="text-wrapper">
                         <p>Du har valgt at afbryde kontakten - Godt!</p>
                         <p>Aldrig del oplysninger som du ikke er tilpas med, især ikke person følsomme oplysninger </p>
@@ -207,24 +221,24 @@
                     <img src="images/stop-contact.png" alt="">
                 </div>
 
-                <div id="scenario-3a-b" class="scenario">
+                <div id="scenario-3a-b" class="scenario hidden">
                     <div class="text-wrapper">
                         <p>En dag beslutter brugeren, at du har delt tilstrækkeligt nok til, at de kan
                             afpresse
                             dig
                             til at sende mere intimme oplysninger og/eller billeder.</p>
                         <p>Hvad gør du?</p>
-                        <button class="choice button-a" type="button">a.
+                        <button class="choice button-a" onclick="hideAllSectionsExcept('scenario-4a')" type="button">a.
                             <span>Afbryder kontakten med det samme.</span>
                         </button>
-                        <button class="choice button-b" type="button">b.
+                        <button class="choice button-b" onclick="hideAllSectionsExcept('scenario-4b')" type="button">b.
                             <span>Du gør som personen siger i håbet om, at de vil lade dig være
                                 efterfølgende.</span>
                         </button>
                     </div>
                     <img src="images/wanting-pic.png" alt="">
                 </div>
-                <div id="scenario-4a" class="scenario">
+                <div id="scenario-4a" class="scenario hidden">
                     <div class="text-wrapper">
                         <p>Du har valgt at afbryde kontakten - Godt!</p>
                         <p>Du </p>
@@ -232,7 +246,7 @@
                     </div>
                     <img src="images/stop-contact.png" alt="">
                 </div>
-                <div id="scenario-4b" class="scenario">
+                <div id="scenario-4b" class="scenario hidden">
                     <div class="text-wrapper">
                         <p></p>
                         <!--advarelses! Færddigjort-->
