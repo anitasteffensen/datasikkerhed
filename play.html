@@ -32,45 +32,57 @@
         <div class="container">
             <section id="branching-scenarios">
                 <div class="start scenario">
+                    <img class="stranger-pic" src="images/stranger-danger.png"
+                        alt="illustration af en person med to samtale bobler og et alert-ikon">
                     <h1>Fremmed på nettet</h1>
-                    <p>Velkommen til spillet 'Stranger Danger'. Du vil blive stillet over for forskellige scenarier, og
-                        træffe valg ud fra disse scenarier. Hvert valg har betydning for udviklingen af spillet og dets
-                        handling.</p>
+                    <p class="p-start">Velkommen til 'Stranger Danger'.
+                        Et spil hvor du vil blive stillet i
+                        diverse situationer og skal træffe beslutninger for at komme videre. Hvert valg har betydning
+                        for
+                        hvordan handlingen udspiller sig. </p>
+                    <p class="text-end"></p>
                     <button id="start" class="choice" onclick="hideAllSectionsExcept('scenario-1')"
                         type="button">Start</button>
                 </div>
 
                 <div id="scenario-1" class="scenario hidden">
                     <div class="text-wrapper">
-                        <p>Du har åbnet instagram og ser, at du har modtaget en besked anmodning. Du går ind og
-                            tjekker
-                            hvem
-                            der har skrevet, og ser at det er en ukendt-bruger.</p>
-                        <p>Hvad gør du nu?</p>
+                        <p>Du scroller på Instagram, da du ser, at du har modtaget en notifikation: Det er en
+                            besked-anmodning fra en ukendt-bruger.</p>
+                        <p class="text-end">Hvad gør du nu?</p>
                         <button class="choice button-a" onclick="hideAllSectionsExcept('scenario-2a')" type="button">a.
-                            <span>Sletter anmodningen og vender tilbage til at scrolle instagram.</span>
+                            <span>Sletter anmodningen og vender tilbage til at scrolle Instagram.</span>
                         </button>
                         <button class="choice button-b" onclick="hideAllSectionsExcept('scenario-2b')" type="button">b.
                             <span>Åbner og vurdere anmodningens indhold.</span>
                         </button>
                     </div>
-                    <img src="images/request.png"
+                    <img class="scenario-pic" src="images/request.png"
                         alt="screenshot af en instagram besked anmodning, hvor der kan trykkes 'slet">
                 </div>
 
                 <div id="scenario-2a" class="scenario hidden">
                     <div class="text-wrapper">
-                        <p>Du har valgt at slette beskeden, et smart valg.</p>
-                        <p>Du kan til hver en tid dog åbne og vurdere beskeden inden du vælger at slette den. </p>
+                        <p>Du valgte at slette anmodningen, et smart valg!</p>
+                        <p>På Instagram er det også muligt, at åbne og vurdere beskedens indhold inden du vælger at
+                            slette den. Husk dog altid <b>ikke</b> at trykke på links eller lignende fra disse beskeder.
+                        </p>
+                        <p class="text-end">Hvis du har lyst kan du prøve spillet igen og tage et andet valg, og se hvor
+                            du så ender
+                            henne.</p>
                         <!--scenarioet færdiggøres her-->
+                        <button id="return" class="choice" onclick="hideAllSectionsExcept('scenario-1')"
+                            type="button">Prøv igen</button>
                     </div>
-                    <img src="images/delete-request.png"
+                    <img class="scenario-pic" src="images/delete-request.png"
                         alt="screenshot af en instagram besked anmodning, hvor der trykkes 'slet' ">
 
 
                 </div>
                 <div id="scenario-2b" class="scenario hidden">
                     <div class="text-wrapper">
+                        <p>Du valgte at åbne anmodningen og vurdere dens indhold</p>
+
                         <p>Du valgte at åbne beskeden og vurdere dens indhold</p>
                         <p>Hvad gør du nu efter at have set beskedens indhold?</p>
 
@@ -87,8 +99,8 @@
                             <span>Du skriver tilbage til den ukendte-bruger.</span>
                         </button>
                     </div>
-                    <img src="images/check-message.png"
-                        alt="besked anmodning fra bruger, hvor der er tre knapper hhv: block, slet og accept.">
+                    <img class="scenario-pic" src="images/check-message.png"
+                        alt="besked anmodning, som indholder en hilsen fra bruger, hvor der er tre knapper hhv: block, slet og accept.">
 
                 </div>
 
@@ -99,10 +111,12 @@
                             Beskeden er højst sandsynligt sendt fra en spam eller falsk profil, som vil forsøge at for
                             dig til, at klikke på uautoriserede links og/eller give personlige oplysninger til dem.
                         </p>
+                        <!--scenarioet færdiggøres her-->
+                        <button id="return" class="choice" onclick="hideAllSectionsExcept('scenario-1')"
+                            type="button">Prøv igen</button>
 
-                        <!--scenarioet sluttes her-->
                     </div>
-                    <img src="images/delete-message.png"
+                    <img class="scenario-pic" src="images/delete-message.png"
                         alt="screenshot af en instagram besked, hvor der trykkes på slet-knappen.">
 
                 </div>
@@ -132,7 +146,7 @@
                             <!--Går hen til scenario 2b-c-->
                         </button>
                     </div>
-                    <img src="images/check-profile.png"
+                    <img class="scenario-pic" src="images/check-profile.png"
                         alt="screenshot af instagram profilen, hvor der er to billeder af 'personen'.">
                 </div>
 
@@ -144,9 +158,11 @@
                         <p>
                             Beskeden er højst sandsynligt sendt fra en spam eller falsk profil, som vil forsøge at for
                             dig til, at klikke på uautoriserede links og/eller give personlige oplysninger til dem. </p>
-                        <!--scenarioet sluttes her-->
+                        <!--scenarioet færdiggøres her-->
+                        <button id="return" class="choice" onclick="hideAllSectionsExcept('scenario-1')"
+                            type="button">Prøv igen</button>
                     </div>
-                    <img src="images/fake.png"
+                    <img class="scenario-pic" src="images/fake.png"
                         alt="screenshot af instagram profil med rødt banner hvor der står 'fake' på">
                 </div>
 
@@ -166,7 +182,7 @@
                             <span>Du vælger ikke at svare personen og afbryder kontakten.</span>
                         </button>
                     </div>
-                    <img src="images/first-answer.png"
+                    <img class="scenario-pic" src="images/first-answer.png"
                         alt="screenshot af en instagram samtale, hvor der bliver spurgt indtil hvordan du har det.">
 
                 </div>
@@ -176,8 +192,11 @@
                         <p>Du har valgt at afbryde kontakten. Godt!</p>
                         <p>Du skylder dem ingen ting, selv hvis du har skrevet med dem
                             tidligere.</p>
+                        <!--scenarioet færdiggøres her-->
+                        <button id="return" class="choice" onclick="hideAllSectionsExcept('scenario-1')"
+                            type="button">Prøv igen</button>
                     </div>
-                    <img src="images/stop-contact.png"
+                    <img class="scenario-pic" src="images/stop-contact.png"
                         alt="screenshot af profil-oversigt, hvor der trykkes på 'block-knappen">
                 </div>
 
@@ -204,7 +223,7 @@
                                 med enhver anden ven offline.</span>
                         </button>
                     </div>
-                    <img src="images/personal-question.png"
+                    <img class="scenario-pix" src="images/personal-question.png"
                         alt="Samtale mellem ukendt-bruger og dig, hvor ukendt komplimentere dig og spørger ind til privatoplysninger som: alder og hvor du er fra.">
                 </div>
 
