@@ -23,7 +23,7 @@
             <ul class="menu">
                 <li><a href="index.html">Homepage</a></li>
                 <li><a href="index.html#fundamentals">Digitale kodeks</a></li>
-                <li><a href="#play">Learning by doing</a></li>
+                <li><a href="#play">Stranger Danger</a></li>
             </ul>
         </div>
         <img class="banner" src="images/Asset 2.svg" alt="">
@@ -34,13 +34,12 @@
                 <div class="start scenario">
                     <img class="stranger-pic" src="images/stranger-danger.png"
                         alt="illustration af en person med to samtale bobler og et alert-ikon">
-                    <h1>Fremmed på nettet</h1>
+                    <h1>Læring gennem spil</h1>
                     <p class="p-start">Velkommen til 'Stranger Danger'.
                         Et spil hvor du vil blive stillet i
                         diverse situationer og skal træffe beslutninger for at komme videre. Hvert valg har betydning
                         for
                         hvordan handlingen udspiller sig. </p>
-                    <p class="text-end"></p>
                     <button id="start" class="choice" onclick="hideAllSectionsExcept('scenario-1')"
                         type="button">Start</button>
                 </div>
@@ -49,7 +48,7 @@
                     <div class="text-wrapper">
                         <p>Du scroller på Instagram, da du ser, at du har modtaget en notifikation: Det er en
                             besked-anmodning fra en ukendt-bruger.</p>
-                        <p class="text-end">Hvad gør du nu?</p>
+                        <p>Hvad gør du?</p>
                         <button class="choice button-a" onclick="hideAllSectionsExcept('scenario-2a')" type="button">a.
                             <span>Sletter anmodningen og vender tilbage til at scrolle Instagram.</span>
                         </button>
@@ -58,7 +57,7 @@
                         </button>
                     </div>
                     <img class="scenario-pic" src="images/request.png"
-                        alt="screenshot af en instagram besked anmodning, hvor der kan trykkes 'slet">
+                        alt="illustration af en instagram besked anmodning, hvor der kan trykkes 'slet">
                 </div>
 
                 <div id="scenario-2a" class="scenario hidden">
@@ -67,24 +66,27 @@
                         <p>På Instagram er det også muligt, at åbne og vurdere beskedens indhold inden du vælger at
                             slette den. Husk dog altid <b>ikke</b> at trykke på links eller lignende fra disse beskeder.
                         </p>
-                        <p class="text-end">Hvis du har lyst kan du prøve spillet igen og tage et andet valg, og se hvor
+                        <p>Hvis du har lyst kan du prøve spillet igen og tage et andet valg, og se hvor
                             du så ender
-                            henne.</p>
+                            henne. Du kan gå i dybden med vores <a href="index.html#fundamentals">guide til sunde
+                                digitale vaner</a>.</p>
                         <!--scenarioet færdiggøres her-->
-                        <button id="return" class="choice" onclick="hideAllSectionsExcept('scenario-1')"
-                            type="button">Prøv igen</button>
+                        <button class="choice try-again" onclick="hideAllSectionsExcept('scenario-1')"
+                            type="button">Prøv
+                            igen</button>
+
                     </div>
                     <img class="scenario-pic" src="images/delete-request.png"
-                        alt="screenshot af en instagram besked anmodning, hvor der trykkes 'slet' ">
+                        alt="illustration af en instagram besked anmodning, hvor der er en 'slet-knap' ">
 
 
                 </div>
                 <div id="scenario-2b" class="scenario hidden">
                     <div class="text-wrapper">
-                        <p>Du valgte at åbne anmodningen og vurdere dens indhold</p>
+                        <p>Du valgte at åbne anmodningen og vurdere dens indhold. Beskeden indholder en hilsen på et
+                            andet sprog og en emoji. </p>
 
-                        <p>Du valgte at åbne beskeden og vurdere dens indhold</p>
-                        <p>Hvad gør du nu efter at have set beskedens indhold?</p>
+                        <p>Hvad gør du?</p>
 
                         <button class="choice button-a" onclick="hideAllSectionsExcept('scenario-2b-a')"
                             type="button">a.
@@ -106,33 +108,34 @@
 
                 <div id="scenario-2b-a" class="scenario hidden">
                     <div class="text-wrapper">
-                        <p>Du valgte at slette beskeden efter at have vurderet dens indhold - Smart!</p>
+                        <p>Du valgte at slette beskeden efter at have vurderet dens indhold - Klogt!</p>
                         <p>
                             Beskeden er højst sandsynligt sendt fra en spam eller falsk profil, som vil forsøge at for
                             dig til, at klikke på uautoriserede links og/eller give personlige oplysninger til dem.
                         </p>
                         <!--scenarioet færdiggøres her-->
-                        <button id="return" class="choice" onclick="hideAllSectionsExcept('scenario-1')"
-                            type="button">Prøv igen</button>
+                        <p>Hvis du har lyst kan du prøve spillet igen og tage et andet valg, og se hvor
+                            du så ender
+                            henne. Du kan gå i dybden med vores <a href="index.html#fundamentals">guide til sunde
+                                digitale vaner</a>.</p>
+                        <button class="choice try-again" onclick="hideAllSectionsExcept('scenario-1')"
+                            type="button">Prøv
+                            igen</button>
 
                     </div>
+
                     <img class="scenario-pic" src="images/delete-message.png"
-                        alt="screenshot af en instagram besked, hvor der trykkes på slet-knappen.">
+                        alt="illustration af en instagram besked, hvor der trykkes på slet-knappen.">
 
                 </div>
 
                 <div id="scenario-2b-b" class="scenario hidden">
                     <div class="text-wrapper">
-                        <p>Kloget at du tjekker profilen beskeden kommer fra.</p>
-                        <p>Som du kan se, så er profilen sat til privat. Men du kan stadig se antal 'followers'
-                            og
-                            antal
-                            'following'. De følger næsten 40 gange flere end der følger dem. Dette <i>kan</i>
-                            være
-                            et
-                            tegn
-                            på, at profilen er falsk</p>
-                        <p>Hvad gør du i denne situation?</p>
+                        <p> Kloget at du tjekker profilen, hvor beskeden kommer fra.
+                        </p>
+                        <p>Profilen har to sort/hvid billeder som er grynet. Dertil så følger de næsten 4000, hvor 'kun'
+                            49 følger dem tilbage.</p>
+                        <p>Efter at have tjekket profilen, hvad gør du?</p>
                         <button class="choice button-a" onclick="hideAllSectionsExcept('scenario-2b-b-a')"
                             type="button">a.
                             <span>Du vurdere at profilen er fake og vælger derfor, at slette beskeden og
@@ -143,69 +146,79 @@
                         <button class="choice button-b" onclick="hideAllSectionsExcept('scenario-2b-c')"
                             type="button">b.
                             <span>Du beslutter at besvare brugeren.</span>
-                            <!--Går hen til scenario 2b-c-->
                         </button>
                     </div>
                     <img class="scenario-pic" src="images/check-profile.png"
-                        alt="screenshot af instagram profilen, hvor der er to billeder af 'personen'.">
+                        alt="illustration af instagram profilen, hvor der er to billeder af 'personen'.">
                 </div>
 
 
                 <div id="scenario-2b-b-a" class="scenario hidden">
                     <div class="text-wrapper">
-                        <p>Du har valgt at slette beskeden efter at have vurderet profilen og beskedens indhold. Godt!
+                        <p>Du valgte at slette beskeden efter at have tjekket profilen og beskedens indhold. Godt!
                         </p>
                         <p>
                             Beskeden er højst sandsynligt sendt fra en spam eller falsk profil, som vil forsøge at for
                             dig til, at klikke på uautoriserede links og/eller give personlige oplysninger til dem. </p>
                         <!--scenarioet færdiggøres her-->
-                        <button id="return" class="choice" onclick="hideAllSectionsExcept('scenario-1')"
-                            type="button">Prøv igen</button>
+                        <p>Hvis du har lyst kan du prøve spillet igen og tage et andet valg, og se hvor
+                            du så ender
+                            henne. Du kan gå i dybden med vores <a href="index.html#fundamentals">guide til sunde
+                                digitale vaner</a>.</p>
+                        <button class="choice try-again" onclick="hideAllSectionsExcept('scenario-1')"
+                            type="button">Prøv
+                            igen</button>
+
                     </div>
                     <img class="scenario-pic" src="images/fake.png"
-                        alt="screenshot af instagram profil med rødt banner hvor der står 'fake' på">
+                        alt="illustration af instagram profil med rødt banner hvor der står 'fake' på">
                 </div>
 
                 <div id="scenario-2b-c" class="scenario hidden">
-
                     <div class="text-wrapper">
-                        <p>Du har skrevet tilbage til brugeren og starter en samtale.
-                            Brugeren viser interesse i
-                            dig
-                            og
-                            stiller spørgsmål om din alder, hvor du bor henne af osv.</p>
+                        <p>Du valgte at skrive tilbage til brugeren. Brugeren er hurtig til, at vise interesse i
+                            dig. De
+                            stiller spørgsmål om hvor gammel du er, hvor du kommer fra og lignende spørgsmål.</p>
                         <p>Hvad gør du?</p>
                         <button class="choice button-a" onclick="hideAllSectionsExcept('scenario-3a')" type="button">a.
-                            <span>Du besvare deres spørgsmål og fortsætter samtalen.</span>
+                            <span>Du besvare deres spørgsmål.</span>
                         </button>
                         <button class="choice button-b" onclick="hideAllSectionsExcept('scenario-3b')" type="button">b.
                             <span>Du vælger ikke at svare personen og afbryder kontakten.</span>
                         </button>
                     </div>
                     <img class="scenario-pic" src="images/first-answer.png"
-                        alt="screenshot af en instagram samtale, hvor der bliver spurgt indtil hvordan du har det.">
+                        alt="illustration af en instagram samtale, hvor der bliver spurgt indtil hvordan du har det.">
 
                 </div>
 
                 <div id="scenario-3b" class="scenario hidden">
                     <div class="text-wrapper">
-                        <p>Du har valgt at afbryde kontakten. Godt!</p>
-                        <p>Du skylder dem ingen ting, selv hvis du har skrevet med dem
-                            tidligere.</p>
+                        <p> Du har valgt at afbryde kontakten - Smart valg!</p>
+                        <p> Der er ingen grund til at opgive den slags oplysninger til en bruger du intet forhold
+                            har
+                            til.</p>
                         <!--scenarioet færdiggøres her-->
-                        <button id="return" class="choice" onclick="hideAllSectionsExcept('scenario-1')"
-                            type="button">Prøv igen</button>
+                        <p>Hvis du har lyst kan du prøve spillet igen og tage et andet valg, og se
+                            hvor
+                            du så ender
+                            henne. Du kan gå i dybden med vores <a href="index.html#fundamentals">guide til sunde
+                                digitale vaner</a>.</p>
+                        <button class="choice try-again" onclick="hideAllSectionsExcept('scenario-1')"
+                            type="button">Prøv
+                            igen</button>
+
                     </div>
                     <img class="scenario-pic" src="images/stop-contact.png"
-                        alt="screenshot af profil-oversigt, hvor der trykkes på 'block-knappen">
+                        alt="illustration af profil-oversigt, hvor der trykkes på 'block-knappen">
                 </div>
 
                 <div id="scenario-3a" class="scenario hidden">
                     <div class="text-wrapper">
-                        <p>I begynder at skrive en del sammen og har formet et venskab. De begynder at
+                        <p>Brugeren begynder at
                             stille
                             mere
-                            personlige spørgsmål fx. om din barndom, familieforhold og generelt ting, som
+                            personlige spørgsmål fx. om din barndom, familieforhold. Generelt information, som
                             man
                             ikke
                             deler med alle og en hver.</p>
@@ -220,60 +233,99 @@
                             <span> Du er glad for at de viser interesse i dig og svare deres spørgsmål, ligesom
                                 du
                                 ville
-                                med enhver anden ven offline.</span>
+                                med enhver anden ven.</span>
                         </button>
                     </div>
-                    <img class="scenario-pix" src="images/personal-question.png"
+                    <img class="scenario-pic" src="images/personal-question.png"
                         alt="Samtale mellem ukendt-bruger og dig, hvor ukendt komplimentere dig og spørger ind til privatoplysninger som: alder og hvor du er fra.">
                 </div>
 
-
-
-
                 <div id="scenario-3a-a" class="scenario hidden">
                     <div class="text-wrapper">
-                        <p>Du har valgt at afbryde kontakten - Godt!</p>
-                        <p>Aldrig del oplysninger som du ikke er tilpas med, især ikke person følsomme oplysninger </p>
-
+                        <p> Godt at du valgte, at afbryde kontakten!</p>
+                        <p>Du bør <b>aldrig</b> dele person følsomme oplysninger eller oplysninger, som du ikke
+                            føler
+                            dig komfortable med at dele.</p>
                         <!--scenarioet er færdig.-->
+                        <p>Hvis du har lyst kan du prøve spillet igen og tage et andet valg, og se
+                            hvor
+                            du så ender
+                            henne. Du kan også gå i dybden med vores <a href="index.html#fundamentals">guide til
+                                sunde digitale vaner</a>.</p>
+                        <button class="choice try-again" onclick="hideAllSectionsExcept('scenario-1')"
+                            type="button">Prøv
+                            igen</button>
                     </div>
-                    <img src="images/stop-contact.png" alt="">
+                    <img class="scenario-pic" src="images/stop-contact.png"
+                        alt="illustration af instagram profilen, hvor der er en klick-mus som trykker på block.">
                 </div>
 
                 <div id="scenario-3a-b" class="scenario hidden">
                     <div class="text-wrapper">
-                        <p>En dag beslutter brugeren, at du har delt tilstrækkeligt nok til, at de kan
-                            afpresse
-                            dig
-                            til at sende mere intimme oplysninger og/eller billeder.</p>
+                        <p>
+                            En dag modtager du en besked, hvor brugeren spørger efter mere intime billede af dig.
+                            Det
+                            ønsker du ikke at gøre, men brugeren bliver ved med at presse på. De afpresser dig
+                            blandt
+                            andet med,
+                            oplysninger som du tidligere har delt med dem, som du ikke ønsker at få delt</p>
+
+
                         <p>Hvad gør du?</p>
                         <button class="choice button-a" onclick="hideAllSectionsExcept('scenario-4a')" type="button">a.
                             <span>Afbryder kontakten med det samme.</span>
                         </button>
                         <button class="choice button-b" onclick="hideAllSectionsExcept('scenario-4b')" type="button">b.
-                            <span>Du gør som personen siger i håbet om, at de vil lade dig være
-                                efterfølgende.</span>
+                            <span>Du gør som personen siger.</span>
                         </button>
                     </div>
-                    <img src="images/wanting-pic.png" alt="">
+                    <img class="scenario-pic taller-pic" src="images/wanting-pic.png"
+                        alt="illustration af en samtale mellem dig og x, hvor at x afpresser dig til at sende intime billeder">
                 </div>
                 <div id="scenario-4a" class="scenario hidden">
                     <div class="text-wrapper">
-                        <p>Du har valgt at afbryde kontakten - Godt!</p>
-                        <p>Du </p>
+                        <p>Godt, at du valgte at afbryde kontakten!</p>
+                        <p>Vi anbefalder at du rapportere brugeren til platformen, samt tager en snak med dine
+                            forældre
+                            om din oplevelse. Dine forældre kan komme med forskellige måder, at bearbejde det der er
+                            sket, samt hjælpe dig med, at lære af din oplevelse.</p>
                         <!--færdiggjort-->
+                        <p>Du kan gå i dybden med vores <a href="index.html#fundamentals">guide til
+                                sunde digitale vaner</a>.</p>
                     </div>
-                    <img src="images/stop-contact.png" alt="">
+                    <img class="scenario-pic" src="images/stop-contact.png"
+                        alt="illustration af instagram profilen, hvor der er en klick-mus som trykker på block.">
                 </div>
                 <div id="scenario-4b" class="scenario hidden">
                     <div class="text-wrapper">
-                        <p></p>
+                        <p class="stop">Stop!</p>
+                        <p>Du bør <b>aldrig</b> dele den slags billeder eller person følsomme oplysninger på
+                            baggrund
+                            af, at en person afpresser dig. Det kan nemlig have langvarige konsekvenser som fx:</p>
+                        <ul>
+                            <li>Identitetstyveri</li>
+                            <li>Blackmailing</li>
+                            <li class="sub-li">Herunder sexstortion, hvor folk afpresser børn og unge til at dele
+                                eksplicitte billeder, og hvis deres krav ikke mødes offentligegøres allerede delte
+                                billeder.</li>
+                            <li>Finansiel udnyttelse</li>
+                        </ul>
+                        <p>Hvis du eller andre oplever dette, anbefaldes det at tage fat i dine forældre og være
+                            ærlige
+                            om situationen du er i. Herefter anbefaldes det, at I sammen kontakter politiet og den
+                            pågældende platform og anmelder disse overgreb.</p>
                         <!--advarelses! Færddigjort-->
+                        <p>Du kan gå i dybden med vores <a href="index.html#fundamentals">guide til
+                                sunde digitale vaner</a>.</p>
                     </div>
-                    <img src="images/stop.png" alt="">
+
+                    <img class="scenario-pic taller-pic" src="images/stop.png"
+                        alt="illustration af den ukendtes profil med en rød cirkel med en streg igennem over profilen. ">
                 </div>
             </section>
         </div>
+
+
 
 
 

@@ -42,14 +42,14 @@ h3 {
 h1 {
   font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   color: #333333;
 }
 
 h2 {
   font-size: 1.6;
   font-weight: 400;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   margin-top: 1.5rem;
   color: #444444;
 }
@@ -58,10 +58,11 @@ p {
   font-family: open-sans;
   font-size: 1rem;
   line-height: 26px;
+  /*Golden ratio rule (xx * 1.618) */
   color: #333333;
   text-align: left;
   word-break: balance;
-  /*Golden ratio rule (xx * 1.618) */
+  margin-bottom: 0.5rem;
 }
 
 main {
@@ -261,7 +262,7 @@ main {
 }
 @media only screen and (min-width: 700px) {
   .header ul {
-    margin-top: -3.5rem;
+    margin-top: -4rem;
     padding: 0;
     list-style: none;
     overflow: hidden;
@@ -301,7 +302,7 @@ main {
   display: flex;
   justify-content: space-evenly;
   gap: 2rem;
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 #footer .disclaimer {
   background-color: #444444;
@@ -319,23 +320,23 @@ main {
 #branching-scenarios h1 {
   font-size: 1.6;
   font-weight: 400;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   margin-top: 1.5rem;
   color: #444444;
   font-size: 1.6rem;
 }
 #branching-scenarios p {
-  font-size: 1.15rem;
-  line-height: 30px;
+  margin-bottom: 5px;
 }
 #branching-scenarios #start {
   font-family: open-sans;
   font-size: 1rem;
   line-height: 26px;
+  /*Golden ratio rule (xx * 1.618) */
   color: #333333;
   text-align: left;
   word-break: balance;
-  /*Golden ratio rule (xx * 1.618) */
+  margin-bottom: 0.5rem;
   background-color: #FAF9F6;
   width: 5rem;
   align-items: center;
@@ -363,10 +364,11 @@ main {
   font-family: open-sans;
   font-size: 1rem;
   line-height: 26px;
+  /*Golden ratio rule (xx * 1.618) */
   color: #333333;
   text-align: left;
   word-break: balance;
-  /*Golden ratio rule (xx * 1.618) */
+  margin-bottom: 0.5rem;
   border: solid 1px black;
   border-radius: 5px;
   color: black;
@@ -376,7 +378,9 @@ main {
   gap: 1.5rem;
   align-items: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 1rem 0;
+  display: flex;
+  width: 100%;
+  max-width: 675px;
 }
 #branching-scenarios button:hover {
   font-weight: 500;
@@ -384,33 +388,44 @@ main {
 }
 #branching-scenarios .button-a {
   background: linear-gradient(to right, #0366E8 0, #0366E8 2rem, #FAF9F6 2rem, #FAF9F6 100%);
+  margin-top: 1.5rem;
 }
 #branching-scenarios .button-b {
   background: linear-gradient(to right, #08A2E1 0, #08A2E1 2rem, #FAF9F6 2rem, #FAF9F6 100%);
+  margin-top: 1.5rem;
 }
 #branching-scenarios .button-c {
   background: linear-gradient(to right, #0BB3D9 0, #0BB3D9 2rem, #FAF9F6 2rem, #FAF9F6 100%);
+  margin-top: 1.5rem;
 }
-#branching-scenarios #return {
+#branching-scenarios .try-again {
   font-family: open-sans;
   font-size: 1rem;
   line-height: 26px;
+  /*Golden ratio rule (xx * 1.618) */
   color: #333333;
   text-align: left;
   word-break: balance;
-  /*Golden ratio rule (xx * 1.618) */
+  margin-bottom: 0.5rem;
   background-color: #FAF9F6;
   width: 8rem;
-  align-items: center;
   margin: 0 auto;
   margin-top: 1rem;
   display: block;
   text-align: center;
   cursor: pointer;
+  margin-top: 1.5rem;
 }
-#branching-scenarios #return:hover {
+#branching-scenarios #try-again:hover {
   color: #333333;
   font-weight: 600;
+}
+#branching-scenarios a {
+  color: #333333;
+  cursor: pointer;
+}
+#branching-scenarios a:hover {
+  font-weight: 550;
 }
 #branching-scenarios .scenario-pic {
   height: 40vh;
@@ -421,49 +436,63 @@ main {
   height: 32vh;
   margin: auto;
 }
-#branching-scenarios .text-end {
-  margin: 0.5rem 0;
+#branching-scenarios .stop {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+#branching-scenarios ul {
+  font-family: open-sans;
+  font-size: 1rem;
+  line-height: 26px;
+  /*Golden ratio rule (xx * 1.618) */
+  color: #333333;
+  text-align: left;
+  word-break: balance;
+  margin-bottom: 0.5rem;
+  list-style: circle;
+}
+#branching-scenarios li {
+  margin-bottom: 0.5rem;
+}
+#branching-scenarios .sub-li {
+  margin-left: 1.5rem;
 }
 
-@media only screen and (min-width: 500px) {
-  #branching-scenarios .scenario {
-    flex-direction: row;
-    gap: 1rem;
-    align-items: center;
-  }
-  #branching-scenarios .scenario-pic {
-    height: 30%;
-    width: 40%;
-    margin: auto auto;
-  }
-  #branching-scenarios .stranger-pic {
-    width: 10%;
-    height: 10%;
-  }
-}
 /*desktop version - made on behalf of recommendation on smaller screens such as phones and smaller tablets*/
 @media only screen and (min-width: 700px) {
   #branching-scenarios .scenario {
     flex-direction: row;
-    gap: 2rem;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  #branching-scenarios h1 {
+    align-self: flex-start;
+  }
+  #branching-scenarios .stranger-pic {
+    height: 35vh;
+  }
+  #branching-scenarios .scenario {
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-top: 4rem;
+    /*So that the head-banner doesnt cover the sections*/
   }
   #branching-scenarios .scenario-pic {
-    height: 40%;
-    width: 40%;
+    height: 45vh;
     margin: auto auto;
   }
-  #branching-scenarios .stranger {
-    margin-top: 12rem !important;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  #branching-scenarios h1 {
-    margin-top: 3rem;
+  #branching-scenarios .taller-pic {
+    height: 50vh;
+    margin: auto auto;
   }
 }
 @media screen and (min-width: 1200px) {
   #branching-scenarios h1 {
     margin-top: 4rem;
+  }
+  #branching-scenarios .text-wrapper {
+    margin-top: 6rem;
   }
 }
 @media screen and (min-width: 1400px) {

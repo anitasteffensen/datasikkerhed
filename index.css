@@ -43,14 +43,14 @@ h3 {
 h1 {
   font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   color: #333333;
 }
 
 h2 {
   font-size: 1.6;
   font-weight: 400;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   margin-top: 1.5rem;
   color: #444444;
 }
@@ -59,10 +59,11 @@ p {
   font-family: open-sans;
   font-size: 1rem;
   line-height: 26px;
+  /*Golden ratio rule (xx * 1.618) */
   color: #333333;
   text-align: left;
   word-break: balance;
-  /*Golden ratio rule (xx * 1.618) */
+  margin-bottom: 0.5rem;
 }
 
 main {
@@ -262,7 +263,7 @@ main {
 }
 @media only screen and (min-width: 700px) {
   .header ul {
-    margin-top: -3.5rem;
+    margin-top: -4rem;
     padding: 0;
     list-style: none;
     overflow: hidden;
@@ -302,7 +303,7 @@ main {
   display: flex;
   justify-content: space-evenly;
   gap: 2rem;
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 #footer .disclaimer {
   background-color: #444444;
